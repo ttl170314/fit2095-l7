@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>List of Patients</title>
+</head>
+<body>
+
+<h2>Patients at <%= clinic.name %></h2>
+<ul>
+<% patients.forEach(patient => { %>
+    <li>
+        <%= patient.name %> - <%= patient.age %> years
+        <a href="/clinic/<%= clinic._id %>/removePatient/<%= patient._id %>">Remove</a>
+    </li>
+<% }); %>
+</ul>
+
+<a href="/clinic">Back to Clinics</a>
+
+</body>
+</html>

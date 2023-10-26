@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>List of Clinics</title>
+</head>
+<body>
+
+<h2>Clinics</h2>
+<ul>
+<% clinics.forEach(clinic => { %>
+    <li>
+        <%= clinic.name %> - <%= clinic.address %>
+        <a href="/clinic/<%= clinic._id %>/patients">View Patients</a>
+        <a href="/clinic/<%= clinic._id %>/addPatient">Add Patient</a>
+    </li>
+<% }); %>
+</ul>
+
+<a href="/addClinic">Add Clinic</a>
+
+</body>
+</html>
